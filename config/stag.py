@@ -36,16 +36,25 @@ if FRONTEND_BACKEND_SEPARATION:
     CORS_ORIGIN_ALLOW_ALL = True
     CORS_ALLOW_CREDENTIALS = True
 
-DATABASES.update(
-    {
-        'default': {
-            'ENGINE': 'django.db.backends.mysql',
-            'NAME': '',  # 数据库名
-            'USER': '',  # 数据库用户
-            'PASSWORD': '',  # 数据库密码
-            'HOST': '',  # 数据库主机
-            'PORT': '3306',  # 数据库端口
-        },
-    }
-)
-
+# DATABASES.update(
+#     {
+#         'default': {
+#             'ENGINE': 'django.db.backends.mysql',
+#             'NAME': '',  # 数据库名
+#             'USER': '',  # 数据库用户
+#             'PASSWORD': '',  # 数据库密码
+#             'HOST': '',  # 数据库主机
+#             'PORT': '3306',  # 数据库端口
+#         },
+#     }
+# )
+DATABASES.update = {
+    "default": {
+        "ENGINE": "django.db.backends.mysql",
+        "NAME": "for-test",  # noqa
+        "USER": "root",
+        "PASSWORD": "eou8z721F8jB",
+        "HOST": "192.168.165.234",
+        "PORT": "3306",
+    },
+}
