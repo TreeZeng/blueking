@@ -30,6 +30,7 @@ else:
     )
 DJANGO_CONF_MODULE = "config.{env}".format(env=ENVIRONMENT)
 
+
 try:
     _module = __import__(DJANGO_CONF_MODULE, globals(), locals(), ["*"])
 except ImportError as err:
